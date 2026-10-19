@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <script>
+
+        const rectagle={
+           length :10,
+           breadth : 15,
+           area : function(){
+                return this.length * this.breadth
+           },
+           perimeter : function(){
+            return (2*(this.length+this.breadth))
+           },
+           display : function(){
+            console.log("Length is :" +this.length)
+            console.log("breadth is :" +this.breadth)
+            console.log("area of reactangle is :" +this.area())
+            console.log("Perimeter of reactangle is :" +this.perimeter())
+           }
+
+        }
+
+        const circle ={
+            radius: 5,
+
+            getArea : function()
+        {
+            return (Math.PI*(this.radius*this.radius))
+        },
+         getCircum : function(){
+            return (2*Math.PI* this.radius)
+        },
+        display : function(){
+            console.log("Redius is :" +this.radius)
+            console.log("area of circle is :" +this.getArea())
+            console.log("Circumfrence of circle is :" +this.getCircum ())
+           }
+    }
+
+    rectagle.display()
+    circle.display()
+    </script>
+    
+</body>
+</html>

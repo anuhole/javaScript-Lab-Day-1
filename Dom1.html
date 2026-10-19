@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        
+        function checkNum(){
+            var num=parseInt( document.getElementById("id1").value)
+             var result = document.getElementById("res")
+            if(num <= 0 || num >= 1000){
+                result.innerHTML="Number is Out of range"
+        }else{
+            var sum=0
+            var temp = num;
+            while(temp>0){
+                sum += temp % 10
+                temp = Math.floor(temp/10)
+            }
+            result.innerHTML =` Sum of digit of ${num} is ${sum}`
+        }
+    }
+        
+
+    </script>
+    
+</head>
+<body>
+    <form>
+        Enter the Positive Number less Than 1000 :<br>
+        <input type="text" id="id1" >
+        <br>
+        <input type="button" value="Submit" onclick="checkNum()">
+
+    </form>
+    <br>
+    <div id ="res"></div>
+    
+</body>
+</html>

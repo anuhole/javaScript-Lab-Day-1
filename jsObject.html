@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <script>
+
+        // Question 1
+        var arr = [10, 20, 30, 40, 50]
+        function avgAndsum() {
+            
+            var sum = 0
+
+            for (no of arr) {
+                sum += no
+            }
+            console.log("Sum: " + sum)
+            var avg = sum / arr.length
+            console.log("Avarage is:" + avg)
+        }
+        avgAndsum(arr)
+
+        // Question2
+
+        var employees =[]
+        for (i =0; i<5;i++){
+            var names= prompt("Enter the name of employees")
+            employees.push(names)
+            
+        }
+        employees.sort()
+        console.log(employees)
+
+        //  Question 3
+
+        var numbers=[10,20,30,40,50]
+
+        var newNumbers= numbers.map(no => no*no)
+
+        console.log("Original Array "+numbers)
+        console.log("New Array "+newNumbers)
+
+       // Question 4
+        function subArr(startArr,endArr,arr){
+            result =[]
+
+            for(i=startArr;i<=endArr;i++){
+                result[result.length]=arr[i]
+
+            }
+            return result;
+        }
+        var newArr =[12,3,8,6,9,21,12,34,11,33]
+        console.log(subArr(2,6,newArr))
+
+        // question 5
+        numbers = [12, 45, 67, 23, 89, 34, 90, 15, 50, 78];
+        var sum=0
+        for(i=0;i<numbers.length;i++){
+            sum += numbers[i]
+        }
+        var average=sum/numbers.length
+    
+        averageCount=0
+        for(i=0;i<numbers.length;i++){
+            if(numbers[i]>average)
+                averageCount++
+        }
+
+        console.log("Sum "+sum)
+        console.log("Average "+average)
+        console.log("Average Count "+averageCount)
+
+      
+
+
+        
+
+    </script>
+</body>
+
+</html>

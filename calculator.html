@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function add(){ 
+
+          no1=parseInt( document.getElementById("num1").value)
+          no2=parseInt(  document.getElementById("num2").value)
+
+             document.getElementById("res").innerHTML= no1+no2
+        }
+
+         function multply(){
+            no1=parseInt( document.getElementById("num1").value)
+          no2=parseInt(  document.getElementById("num2").value)
+        
+            document.getElementById("res").innerHTML=no1*no2
+
+         }
+         function division(){
+            no1=parseInt( document.getElementById("num1").value)
+          no2=parseInt(  document.getElementById("num2").value)
+            document.getElementById("res").innerHTML=no1/no2
+          
+
+         }
+
+         
+          
+        
+
+    </script>
+   
+</head>
+<body>
+    <h2> Calculator</h2>
+    <form>
+        Number 1:
+        <input type="text" id="num1" ><br>
+
+        Number 2:
+        <input type="text" id="num2" ><br>
+        <br>
+        <input type="button" value="Add" onclick="add()" >
+        <input type="button" value="multply"  onclick="multply()">
+        <input type="button" value="Divide"  onclick="division()" >
+
+        <br>
+        Result
+        <span id="res"></span>
+    </form>
+    
+</body>
+</html>

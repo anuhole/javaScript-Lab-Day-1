@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="scripts.js"> </script>
+   
+</head>
+<body>
+    <script>
+
+        var i=1
+        while(i<=10){
+            document.write("2 * " +i + " = "+2*i +"<br>")
+            i++
+        }
+       // Question 4
+        document.write(" Convert into inches "+covertIntoInches(2) +" <br>")
+       // Question5
+        document.write("Expontial value is "+ pow(2,4) +"<br>")
+
+       // Question 6
+        document.write("Sum of square of even numbers are " +sumOfSqureOfEvenNum(10)+"<br>")
+
+
+        // document.write("Sum and average of three numbers are "+calculatesumandaverage(2,2,2)+ "<br>")
+
+        //Question 1
+        var count =parseInt(prompt("Enter the number count"))
+        var message =prompt("Enter the message")
+        for(i=0;i<count;i++){
+            document.write(message +"<br>")
+        }
+
+        // Question 2
+
+        // var num1 = parseInt(prompt("Enter Number 1"))
+        // var num2 = parseInt(prompt("Enter Number 2"))
+        // var num3 = parseInt(prompt("Enter Number 3"))
+
+        // if(num1 >= num2 && num1 >=num3){
+        //     document.write(num1+" is Graether  ")
+        // }
+        // if(num2 >= num3){
+        //      document.write(num2+" is Graether ")
+        // }
+        // else
+        // {
+        //      document.write(num3+" is Graether ")
+        // }
+
+        //Question3
+    var num=parseInt(prompt("enter the numbers limit"))
+
+        var evenNum =function(num){
+            for(i=0;i<=num;i++){
+                if(i%2==0){
+                document.write("<br>" + i)
+            }
+            }
+        }
+        evenNum(num)
+
+
+    //Question 6
+    var opration= function(){
+    var num1=parseInt(prompt("enter Number 1"))
+    var num2=parseInt(prompt("enter the number 2"))
+    operator=prompt("Enter the opeartion you want + - * /")
+     var result;
+     switch(operator){
+        case '+':
+            result=num1+num2
+            break
+        case '-':
+            result=num1-num2 
+            break
+        case '*':
+            result=num1*num2
+            break
+        case "/":
+            result=num1/num2
+            break
+        default:
+            result="Invalid Input"
+     }
+     return result
+     }
+    document.write("result is: "+opration()) 
+
+
+    // Question 7
+
+    function calculateBmi(height,weight){
+        var bmi=weight/(height*height)
+        var categery 
+        if(bmi < 18.5){
+            categery="Underweight"
+        }
+        else if(bmi >=18.5 && bmi <25.0){
+            categery="Normal"
+        }
+        else if(bmi > 25.0 && bmi< 30.0)
+        {
+            categery="overweight"
+        } 
+        else if(bmi > 30.0){
+            categery="Obese"
+        }
+        return bmi,categery
+    }
+
+
+    var weight =parseInt(prompt("Enter the Weight in Kg"))
+    var height =parseInt(prompt("Enter the Weight in meters"))
+
+    var result= calculateBmi(weight,height)
+    document.write(result)
+
+
+    </script>
+
+       
+</body>
+</html>

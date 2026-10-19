@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+
+         function calculate(){
+         var radius = document.getElementById("id1").value
+
+         const area = (Math.PI*radius*radius).toFixed(2)
+         const circumferance = (2*Math.PI*radius).toFixed(2)
+
+        document.getElementById("area").innerHTML=area
+        document.getElementById("Circum").innerHTML=circumferance
+         
+        }
+      
+    </script>
+    
+</head>
+<body>
+    <form padding="25px">
+        Enter The Radius 
+        <input type="text" id="id1" > <br>
+        <input type="button" value="display" id="id2" onclick=" calculate()">
+        <br>
+        Area:
+        <span id="area">  </span>
+        <br>
+        Circumferance:
+        <span id="Circum">  </span>
+
+        
+    </form>
+    
+</body>
+</html>

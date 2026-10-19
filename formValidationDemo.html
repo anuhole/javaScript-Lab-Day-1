@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        span{ color: red;}
+    </style>
+    <script>
+        function validateUsername() {
+            var un = document.getElementById("uname").value
+            if (un.length == 0 || un == null) {
+                document.getElementById("id1").textContent = "Username is Mandatory"
+                return false
+            }
+            else if (un.length < 5) {
+                document.getElementById("id1").textContent="Username min 5 chars"
+                return false
+            }
+            return true
+        }
+        function validateAge() {
+            var age = document.getElementById("age").value
+            if (age.length == 0 || age == null) {
+                document.getElementById("id2").textContent="Age is Mandatory"
+                return false
+            }
+            else if (isNaN(age)) {
+                document.getElementById("id2").textContent="age must be number"
+                return false
+            }
+            else {
+                var a = parseInt(age)
+                if (a < 18 || age > 60) {
+                   document.getElementById("id2").textContent="age is not in range"
+                    return false
+                }
+            }
+            return true
+
+        }
+        function validate() {
+            if (validateUsername() && validateAge()) {
+                return true
+            }
+            return false
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <form onsubmit="return validate()">
+        Username :<input id="uname"> <br>
+        <span id="id1"></span><br>
+        Age : <input id="age"><br>
+         <span id="id1"></span><br>
+        <input type="submit">
+
+    </form>
+
+</body>
+
+</html>

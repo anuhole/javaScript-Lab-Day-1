@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        EmpArr=[
+           {empId:101 , empName:"Shivam",salary: 40000} ,
+           {empId:102 , empName:"Tanvi",salary: 55000} ,
+           {empId:103 , empName:"Anushka",salary: 40000} ,
+           {empId:104 , empName:"Deep",salary: 50000} 
+        ]
+
+        function calculateSalry(employees){
+            let  sum=0
+        for(let emp of employees){
+            
+             sum += emp.salary   
+        }
+         return sum
+        }
+       // document.write()
+       var TotalSalary=calculateSalry(EmpArr)
+        console.log(TotalSalary)
+
+         var str ="<table border ='1' >"
+           
+           
+               for (let emp of EmpArr) {
+                    str += `<tr><td>${emp.empId}</td><td>${emp.empName}</td><td>${emp.salary}</td></tr>`;
+                }
+               
+    
+             str +=`<tr><td colspan='2'>Total Salary</td><td>${TotalSalary}</td></tr>`;
+            str += "</table>";
+           
+            document.write(str)
+    </script>
+</body>
+</html>
